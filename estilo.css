@@ -1,0 +1,111 @@
+/* Estilo general del cuerpo de la página */
+body {
+  padding: 40px; /* Espaciado interior del cuerpo */
+  overflow-x: hidden; /* Recorta todos los elementos que exedan en horizontal del documento */
+}
+
+/* Estilo de navegación y botón de menú */
+nav,.btnMenu {
+  float: right; /* Elementos flotantes a la derecha */
+  position: relative; /* Posición relativa para alinear el botón de menú */
+  top: 27px; /* Desplazamiento hacia abajo */
+}
+
+/* Estilo de los enlaces */
+a {
+  border: 1px solid black; /* Borde del enlace */
+  background-color: gray; /* Color de fondo */
+  color: white; /* Color del texto */
+  text-align: center; /* Alineación del texto */
+  text-decoration: none; /* Sin subrayado */
+  padding: 7px 10px; /* Espaciado interior */
+  margin: 5px; /* Margen exterior */
+  font-family: Arial; /* Fuente */
+  font-size: 12px; /* Tamaño del texto */
+}
+
+/* Estilo del logotipo */
+.logo {
+  width: 130px; /* Ancho del logotipo */
+}
+
+/* Estilo del contenedor principal */
+.contenedor {
+  display: grid; /* Contenedor de diseño de cuadrícula */
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas de ancho flexible */
+  gap: 20px; /* Espacio entre elementos */
+}
+
+/* Estilo de los artículos */
+article {
+  border: 1px solid black; /* Borde del artículo */
+  padding: 5px; /* Espaciado interior del artículo */
+}
+
+/* Estilo del encabezado de los artículos */
+article h1 {
+  background-color: black; /* Color de fondo del encabezado */
+  color: white; /* Color del texto */
+  margin-top: 0px; /* Margen superior */
+}
+
+/* Estilo de los párrafos y encabezados de los artículos */
+p,
+article h1 {
+  padding: 7px 10px; /* Espaciado interior */
+}
+
+/* Estilo del botón de menú */
+.btnMenu {
+  width: 30px; /* Ancho del botón */
+  aspect-ratio: 1/1; /* Relación de aspecto cuadrada */
+  display: none; /* Ocultar inicialmente en tamaños de pantalla grandes */
+  cursor: pointer; /* Cambia el cursor del mouse a una mano cuando se pasa sobre el elemento, indicando que es interactivo */
+}
+
+/* Estilo de la línea separadora */
+.line {
+  width: 100%; /* Ancho completo */
+  background-color: black; /* Color de fondo */
+  height: 5px; /* Altura */
+  border-radius: 10px; /* Borde redondeado */
+}
+
+/* Estilo del menú móvil */
+.menuMobile {
+  width: 200px; /* Ancho del menú */
+  background-color: white; /* Color de fondo */
+  position: absolute; /* Posición relativa para desplazar */
+  top: 110px; /* Desplazamiento hacia abajo */
+  right: -300px; /* Inicialmente fuera de la pantalla */
+  box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.3); /* Sombra */
+  display: none; /* Ocultar inicialmente */
+  transition: all 1s; /* Transición suave */
+}
+
+/* Estilo de los enlaces del menú móvil */
+.menuMobile a {
+  display: block; /* Convertir en bloques para ocupar el ancho */
+}
+
+/* Estilo para abrir el menú móvil */
+.menuMobileOpen {
+  right: 50px; /* Ajustar la posición para mostrar el menú */
+}
+
+/* Estilos responsivos */
+@media (max-width: 530px) {
+  .btnMenu {
+    display: grid; /* Mostrar el botón de menú en pantallas pequeñas */
+  }
+  .menuDesktop {
+    display: none; /* Ocultar el menú de escritorio en pantallas pequeñas */
+  }
+  .menuMobile {
+    display: block; /* Mostrar el menú móvil en pantallas pequeñas */
+  }
+  .contenedor {
+    grid-template-columns: auto;
+    width: 100%;
+  }
+}
